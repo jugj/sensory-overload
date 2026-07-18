@@ -5,7 +5,7 @@ using UnityEngine;
 public class AttackLeft : MonoBehaviour
 {
         
-    float delay = 2000;
+    float delay = 5000;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,13 +15,13 @@ public class AttackLeft : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.left*Time.deltaTime*2f);
+        transform.Translate(Vector2.left*Time.deltaTime*4f);
 
 
         delay = delay - 1;
         if(delay <= 0){
             Destroy(gameObject);
-            delay = 2000;
+            delay = 5000;
         }
     }
 }

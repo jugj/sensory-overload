@@ -7,9 +7,9 @@ public class BallAttack : MonoBehaviour
     [SerializeField]
     float y_spawn_pos = -1.5f;
     [SerializeField]
-    float x_spawn_pos = 0f;
+    float x_spawn_pos = -1.5f;
 
-    int balldelay = 500;
+    int balldelay = 300;
 
     [SerializeField]
     GameObject ball_active;
@@ -32,7 +32,7 @@ public class BallAttack : MonoBehaviour
         balldelay = balldelay - 1;
         if(balldelay <= 0){
             SpawnBall();
-            balldelay = 500;
+            balldelay = 300;
         }
 
     }
