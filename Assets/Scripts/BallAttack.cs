@@ -2,36 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Respawner : MonoBehaviour
+public class BallAttack : MonoBehaviour
 {
-    // f steht für float
     [SerializeField]
-    float y_spawn_pos = -9f;
+    float y_spawn_pos = -1.5f;
     [SerializeField]
-    float x_spawn_pos = -1f;
+    float x_spawn_pos = -1.5f;
 
+    int balldelay = 300;
 
     [SerializeField]
-    GameObject player_active;
+    GameObject ball_active;
     [SerializeField]
-    GameObject player;
+    GameObject ball;
 
-    void SpawnPlayer(){
+    void SpawnBall(){
         Vector2 spawnpoint = new Vector2(x_spawn_pos, y_spawn_pos);
-        player_active = Instantiate(player, spawnpoint, Quaternion.identity);
+        ball_active = Instantiate(ball, spawnpoint, Quaternion.identity);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        SpawnPlayer();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(player_active == null){
-            SpawnPlayer();
+        balldelay = balldelay - 1;
+        if(balldelay <= 0){
+            SpawnBall();
+            balldelay = 300;
         }
+
     }
 }
