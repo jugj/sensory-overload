@@ -10,14 +10,28 @@ public class Respawner : MonoBehaviour
     [SerializeField]
     float x_spawn_pos = -8f;
 
+
+    [SerializeField]
+    GameObject player_active;
+    [SerializeField]
+    GameObject player;
+
+    void SpawnPlayer(){
+        Vector2 spawnpoint = new Vector2(x_spawn_pos, y_spawn_pos);
+        player_active = Instantiate(player, spawnpoint, Quaternion.identity);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        SpawnPlayer();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if(player_active == null){
+            SpawnPlayer();
+        }
     }
 }
