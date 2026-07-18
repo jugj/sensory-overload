@@ -76,7 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee,
+    type: 3}
   m_Color: {r: 1, g: 0.9660506, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -166,3 +167,18 @@ MonoBehaviour:
   HP: 10
   sprungkraftMult: 1
   geschwindigkeitMult: 1
+--- !u!114 &-390898097882064009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6716650526314024581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caf1ae159280b844baba6a9ef1560e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  geschwindigkeit: 3
+  sprungkraft: 10
+  fallkraft: 25
