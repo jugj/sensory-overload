@@ -10,9 +10,6 @@ public class BallAttack : MonoBehaviour
     float x_spawn_pos = 0f;
 
     [SerializeField]
-    int balls = Random.Range(4, 7);
-
-    [SerializeField]
     GameObject ball_active;
     [SerializeField]
     GameObject ball;
@@ -25,16 +22,11 @@ public class BallAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SpawnBall();
     }
 
     // Update is called once per frame
     void Update()
     {
-        for (int i = Random.Range(4,7);i >=1; i--){
-            SpawnBall();
-            
-        }
-
-        transform.Translate(Vector2.left*Time.deltaTime*2f);
     }
 }

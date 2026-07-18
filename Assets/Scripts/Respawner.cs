@@ -6,9 +6,9 @@ public class Respawner : MonoBehaviour
 {
     // f steht für float
     [SerializeField]
-    float y_spawn_pos = -1f;
+    float y_spawn_pos = -9f;
     [SerializeField]
-    float x_spawn_pos = -8f;
+    float x_spawn_pos = -1f;
 
 
     [SerializeField]

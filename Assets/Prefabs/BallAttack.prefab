@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5189688285015493147}
   - component: {fileID: 2649241437447621243}
-  - component: {fileID: 8135404647226135929}
   - component: {fileID: 6843630147594760362}
+  - component: {fileID: 1748563637700919954}
   m_Layer: 0
   m_Name: BallAttack
   m_TagString: Untagged
@@ -86,22 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8135404647226135929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6802444444267899428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d8f4edffb3dcc74b9fe7ffe9b3e044d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  y_spawn_pos: -1
-  x_spawn_pos: -8
-  player_active: {fileID: 0}
-  ball: {fileID: 6802444444267899428}
 --- !u!114 &6843630147594760362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,5 +96,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8c8458bf3e9ffb46852776f8003a4a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1748563637700919954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6802444444267899428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70344f3129a06da42a4c902fe65c3126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
