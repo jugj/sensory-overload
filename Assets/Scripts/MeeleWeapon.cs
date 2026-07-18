@@ -21,7 +21,7 @@ public class MeeleWeapon : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning($"Error '{playerName}' not founfd!");
+            Debug.LogWarning($"Error '{playerName}' not founfd! (This Warning is to ignore!)");
         }
     }
 
