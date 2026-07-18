@@ -9,6 +9,8 @@ public class BallAttack : MonoBehaviour
     [SerializeField]
     float x_spawn_pos = 0f;
 
+    int balldelay = 500;
+
     [SerializeField]
     GameObject ball_active;
     [SerializeField]
@@ -22,11 +24,16 @@ public class BallAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SpawnBall();
     }
 
     // Update is called once per frame
     void Update()
     {
+        balldelay = balldelay - 1;
+        if(balldelay <= 0){
+            SpawnBall();
+            balldelay = 500;
+        }
+
     }
 }
