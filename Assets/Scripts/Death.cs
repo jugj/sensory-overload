@@ -17,6 +17,8 @@ public class Death : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other){
-        Destroy(other.gameObject);
+        if(other.collider.CompareTag("Player")){
+            Destroy(other.gameObject);
+        }
     }
 }

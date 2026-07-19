@@ -39,11 +39,11 @@ public class PlayerMovement : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if(Input.GetKey(KeyCode.LeftShift) && Input.GetKey("right")){
+        if(Input.GetKey(KeyCode.PageUp) && Input.GetKey("right")){
             transform.Translate(Vector2.right*Time.deltaTime*geschwindigkeit*1.5f*geschwindigkeitMult);
         }
         
-        if(Input.GetKey(KeyCode.LeftShift) && Input.GetKey("left")){
+        if(Input.GetKey(KeyCode.PageUp) && Input.GetKey("left")){
             transform.Translate(Vector2.left*Time.deltaTime*geschwindigkeit*1.5f*geschwindigkeitMult);
         }
     }

@@ -21,10 +21,11 @@ public class MeeleWeapon : MonoBehaviour
         if (player != null)
         {
             playerTransform = player.transform;
+            positionOffset = new Vector3(1f, 0f, 0f);
         }
         else
         {
-            Debug.LogWarning($"Error '{playerName}' not founfd! (This Warning is to ignore!)");
+            Debug.Log($"Error '{playerName}' not founfd! (This Warning is to ignore!)");
         }
     }
 
@@ -46,6 +47,7 @@ public class MeeleWeapon : MonoBehaviour
             if (player != null && weaponTime <= 0)
             {
                 playerTransform = player.transform;
+                positionOffset = new Vector3(1f, 0f, 0f);
             }
         }
 
@@ -54,7 +56,7 @@ public class MeeleWeapon : MonoBehaviour
             transform.position = playerTransform.position + positionOffset;
         }
 
-        if (Input.GetKey(KeyCode.RightShift))
+        if (Input.GetKey(KeyCode.PageDown))
         {
             weaponTime = 50;
         }
@@ -64,6 +66,9 @@ public class MeeleWeapon : MonoBehaviour
             weaponTime = weaponTime - 1;
         }
 
+    }
+    private void OnCollisionEnter2D(Collision2D other){
+            Destroy(other.gameObject);
     }
 
 }

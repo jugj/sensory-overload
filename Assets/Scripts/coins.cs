@@ -5,12 +5,11 @@ public class coin : MonoBehaviour
     [SerializeField] private int value;
     private bool hasTriggered;
     
-    [SerializeField]private CoinManager coinManager;
+    private CoinManager coinManager;
     private GameObject coinManagerObject;
     
     private void Start()
     {
-        Debug.Log(GameObject.FindWithTag("CoinManager"));
         coinManagerObject = GameObject.FindWithTag("CoinManager");
         coinManager = coinManagerObject.GetComponent<CoinManager>();
     }
