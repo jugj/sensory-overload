@@ -9,7 +9,7 @@ public class BallAttack : MonoBehaviour
     [SerializeField]
     float x_spawn_pos = -1.5f;
 
-    int balldelay = 300;
+    float countdown = 1.0f;
 
     [SerializeField]
     GameObject ball_active;
@@ -29,10 +29,10 @@ public class BallAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        balldelay = balldelay - 1;
-        if(balldelay <= 0){
+        countdown = countdown - Time.deltaTime;
+        if(countdown <= 0){
             SpawnBall();
-            balldelay = 300;
+            countdown = 1.0f;
         }
 
     }
