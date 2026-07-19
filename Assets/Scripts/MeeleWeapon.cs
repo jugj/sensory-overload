@@ -10,6 +10,9 @@ public class MeeleWeapon : MonoBehaviour
     [SerializeField]
     private Vector3 positionOffset = new Vector3(1f, 0f, 0f);
 
+    [SerializeField]
+    int weaponTime = 0;
+
     private Transform playerTransform;
 
     private void Start()
@@ -40,15 +43,27 @@ public class MeeleWeapon : MonoBehaviour
         if (playerTransform == null || playerTransform.gameObject == null)
         {
             GameObject player = GameObject.Find(playerName);
-            if (player != null)
+            if (player != null && weaponTime <= 0)
             {
                 playerTransform = player.transform;
             }
         }
 
-        if (playerTransform != null)
+        if (playerTransform != null  && weaponTime <= 0)
         {
             transform.position = playerTransform.position + positionOffset;
         }
+
+        if (Input.GetKey(KeyCode.RightShift))
+        {
+            weaponTime = 50;
+        }
+
+        if(weaponTime >= 1){
+            transform.Translate(Vector2.right*Time.deltaTime*5);
+            weaponTime = weaponTime - 1;
+        }
+
     }
+
 }
