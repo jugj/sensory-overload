@@ -5,7 +5,7 @@ using UnityEngine;
 public class Sec10Down : MonoBehaviour
 {
     [SerializeField] private float countdownTime = 10f;
-    [SerializeField] private float duration = 500f;
+    [SerializeField] private float duration = 1000f;
     bool down = false;
 
     private float currentTime;
@@ -29,13 +29,13 @@ public class Sec10Down : MonoBehaviour
         }
 
         if(down == true){
-                    transform.position = new Vector3(-10,0,0);
+                    transform.position = new Vector3(-12,0,0);
                     duration = duration - 1f;
                 }
 
         if(down == false){
-                    transform.position = new Vector3(-10,10,0);
-                    duration = 100f;
+                    transform.position = new Vector3(-12,10,0);
+                    duration = 1000f;
                 }
         if(duration <= 0){
             down = false;
